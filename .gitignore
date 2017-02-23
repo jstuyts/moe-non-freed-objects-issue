@@ -1,14 +1,27 @@
+# Gradle work files
 .gradle
-build/
+gradle.properties
+local.properties
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Build folders
+build
+target
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# Eclipse project files
+bin
+.settings
+.classpath
+.project
 
-# Cache of project
-.gradletasknamecache
+# Idea / Android Studio files
+.idea
+*.iml
+*.ipr
+*.iws
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+# Xcode user specific data
+xcode/*.xcodeproj/project.xcworkspace/xcuserdata/
+xcode/*.xcodeproj/xcuserdata/
+
+# Mac Finder
+.DS_Store
