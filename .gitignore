@@ -25,3 +25,6 @@ xcode/*.xcodeproj/xcuserdata/
 
 # Mac Finder
 .DS_Store
+
+
+*.sh
