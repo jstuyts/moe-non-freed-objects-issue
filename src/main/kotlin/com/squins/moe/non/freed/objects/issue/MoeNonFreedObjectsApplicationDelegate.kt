@@ -57,11 +57,11 @@ class MoeNonFreedObjectsApplicationDelegate protected constructor(peer: Pointer)
         val secondScreenFactory: SecondScreenFactory = SecondScreenFactory()
 
         Globals.dispatch_async(Globals.dispatch_get_main_queue(), {
-            println("setRootViewController being called...")
+            println("setRootViewController called to set SecondScreen...")
 
             theWindow.setRootViewController(secondScreenFactory.createScreen())
 
-            println("setRootViewController call completed...")
+            println("setRootViewController call completed, SecondScreen active")
         })
     }
 

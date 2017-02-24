@@ -122,6 +122,13 @@ class SplashScreen private constructor(peer: Pointer) : UIViewController(peer) {
         centerY()
     }
 
+    override fun finalize() {
+        println("SplashScreen.finalize()")
+        println("SplashScreen.finalize()")
+        println("SplashScreen.finalize()")
+        super.finalize()
+    }
+
     override fun supportedInterfaceOrientations(): Long {
         return Portrait or PortraitUpsideDown
     }

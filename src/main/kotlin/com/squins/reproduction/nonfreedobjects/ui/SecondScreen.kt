@@ -115,6 +115,14 @@ class SecondScreen private constructor(peer: Pointer) : UIViewController(peer) {
         return Portrait or PortraitUpsideDown
     }
 
+    override fun finalize() {
+        println("SecondScreen.finalize()")
+        println("SecondScreen.finalize()")
+        println("SecondScreen.finalize()")
+        super.finalize()
+    }
+
+
     companion object {
         @Selector("alloc")
         @JvmStatic external fun alloc(): SecondScreen
