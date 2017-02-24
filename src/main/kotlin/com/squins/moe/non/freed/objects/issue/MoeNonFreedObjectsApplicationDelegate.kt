@@ -62,6 +62,20 @@ class MoeNonFreedObjectsApplicationDelegate protected constructor(peer: Pointer)
             theWindow.setRootViewController(secondScreenFactory.createScreen())
 
             println("setRootViewController call completed, SecondScreen active")
+
+
+            Thread({
+
+                println("System.gc thread sleeps 2s...")
+                Thread.sleep(2000L)
+
+                println("Calling System.gc()...")
+                System.gc()
+                System.gc()
+                System.gc()
+                println("System.gc completed")
+
+            }).start()
         })
     }
 
