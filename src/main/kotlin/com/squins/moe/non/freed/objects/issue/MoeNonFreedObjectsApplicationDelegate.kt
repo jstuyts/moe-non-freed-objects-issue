@@ -48,11 +48,7 @@ class MoeNonFreedObjectsApplicationDelegate protected constructor(peer: Pointer)
 
     private fun launchApplicationAndSetSecondScreen(): Runnable = Runnable {
         println("launchApplicationAndSetSecondScreen(): running")
-        try {
-            Thread.sleep(3000L);
-        } catch(e: Exception) {
-            throw RuntimeException(e)
-        }
+        Thread.sleep(3000L); // simulate slow initialization
 
         val secondScreenFactory: SecondScreenFactory = SecondScreenFactory()
 
