@@ -5,6 +5,7 @@ import apple.uikit.enums.UIInterfaceOrientationMask.Portrait
 import apple.uikit.enums.UIInterfaceOrientationMask.PortraitUpsideDown
 import apple.uikit.enums.UIViewContentMode
 import org.moe.natj.general.Pointer
+import org.moe.natj.general.ann.Owned
 import org.moe.natj.objc.ann.Selector
 
 class SecondScreen private constructor(peer: Pointer) : UIViewController(peer) {
@@ -125,6 +126,7 @@ class SecondScreen private constructor(peer: Pointer) : UIViewController(peer) {
 
     companion object {
         @Selector("alloc")
+        @Owned
         @JvmStatic external fun alloc(): SecondScreen
     }
 }
