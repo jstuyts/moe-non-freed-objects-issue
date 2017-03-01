@@ -10,6 +10,7 @@ import apple.uikit.protocol.UIApplicationDelegate
 import com.squins.reproduction.nonfreedobjects.ui.SecondScreenFactory
 import com.squins.reproduction.nonfreedobjects.ui.SplashScreen
 import org.moe.natj.general.Pointer
+import org.moe.natj.general.ann.Owned
 import org.moe.natj.objc.ann.Selector
 import java.io.File
 
@@ -61,14 +62,11 @@ class MoeNonFreedObjectsApplicationDelegate protected constructor(peer: Pointer)
 
 
             Thread({
-
                 println("System.gc thread sleeps 2s...")
                 Thread.sleep(2000L)
 
                 println("Calling System.gc()...")
-                System.gc()
-                System.gc()
-                System.gc()
+                Runtime.getRuntime().gc()
                 println("System.gc completed")
 
             }).start()
@@ -104,6 +102,7 @@ class MoeNonFreedObjectsApplicationDelegate protected constructor(peer: Pointer)
         }
 
         @Selector("alloc")
+        @Owned
         @JvmStatic external fun alloc(): MoeNonFreedObjectsApplicationDelegate
     }
 }
