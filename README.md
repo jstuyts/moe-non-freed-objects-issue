@@ -2,6 +2,8 @@
 
 Status:  reproduced
 
+Updated status: root-cause was missing `@Owned` annotation. See also this topic: https://discuss.multi-os-engine.org/t/heap-dump-of-the-jvm/625/34
+
 At first, SplashScreen is displayed.
 
 After a few seconds, it is replaced by SecondScreen.
